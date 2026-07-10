@@ -11,7 +11,7 @@ app = FastAPI(title="Snaptix API", version="1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "https://snaptix.ai"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "https://snaptix.ai" ,"https://snaptix-1.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
