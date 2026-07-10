@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1a1d1f;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 769px) {
+  body {
+    cursor: none;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-shadow:
+    1px 1px 0 rgba(50, 130, 235, 0.22),
+    2px 2px 0 rgba(50, 130, 235, 0.16),
+    3px 3px 0 rgba(50, 130, 235, 0.1),
+    5px 6px 14px rgba(26, 29, 31, 0.15);
+}
+
+::selection {
+  background: #3282eb;
+  color: #ffffff;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(26, 29, 31, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 29, 31, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.particle {
+  bottom: -10px;
+  animation-name: float-particle;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-particle {
+  0% {
+    bottom: -10px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
