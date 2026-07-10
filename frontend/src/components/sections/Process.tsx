@@ -1,11 +1,13 @@
 import { Badge } from "../ui/Badge";
 import { ScrollReveal } from "../animations/ScrollReveal";
+import { AuroraBackground } from "../animations/AuroraBackground";
 import { process } from "../../lib/content";
 
 export function Process() {
   return (
-    <section id="process" className="px-6 lg:px-10 py-28 border-t border-paper/10">
-      <div className="mx-auto max-w-[1440px]">
+    <section id="process" className="relative overflow-hidden px-6 lg:px-10 py-28 border-t border-paper/10">
+      <AuroraBackground tone="warm" />
+      <div className="relative mx-auto max-w-[1440px]">
         <ScrollReveal className="max-w-xl mb-16">
           <Badge>How we work</Badge>
           <h2 className="mt-4 text-3xl md:text-4xl font-bold normal-case">
@@ -20,7 +22,7 @@ export function Process() {
             <ScrollReveal key={item.step} delay={i * 0.08}>
               <div className="relative">
                 <span
-                  className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-signal/30 bg-void font-display text-lg text-signal shadow-[0_0_20px_-4px_rgba(79,216,196,0.5)]"
+                  className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-signal via-violet to-coral font-display text-lg text-white shadow-[0_0_20px_-4px_rgba(124,58,237,0.5)]"
                 >
                   {item.step}
                 </span>

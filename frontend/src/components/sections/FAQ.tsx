@@ -23,7 +23,7 @@ export function FAQ() {
                   {item.question}
                   <IconPlus
                     size={18}
-                    className="shrink-0 text-signal transition-transform duration-300 group-data-[state=open]:rotate-45"
+                    className="shrink-0 text-violet transition-transform duration-300 group-data-[state=open]:rotate-45"
                   />
                 </Accordion.Trigger>
                 <Accordion.Content className="overflow-hidden text-sm text-muted leading-relaxed data-[state=open]:pb-5 data-[state=open]:animate-[accordion-down_0.25s_ease-out] data-[state=closed]:animate-[accordion-up_0.25s_ease-out]">

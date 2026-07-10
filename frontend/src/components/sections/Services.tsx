@@ -2,15 +2,13 @@ import { Badge } from "../ui/Badge";
 import { Card } from "../ui/Card";
 import { TiltCard } from "../ui/TiltCard";
 import { ScrollReveal } from "../animations/ScrollReveal";
+import { AuroraBackground } from "../animations/AuroraBackground";
 import { services } from "../../lib/content";
 
 export function Services() {
   return (
     <section id="services" className="relative overflow-hidden px-6 lg:px-10 py-28">
-      <div
-        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, #3282eb, transparent 70%)" }}
-      />
+      <AuroraBackground tone="violet" />
 
       <div className="relative mx-auto max-w-[1440px]">
         <ScrollReveal className="max-w-xl mb-16">

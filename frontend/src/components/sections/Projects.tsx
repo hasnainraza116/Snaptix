@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Badge } from "../ui/Badge";
 import { ScrollReveal } from "../animations/ScrollReveal";
+import { AuroraBackground } from "../animations/AuroraBackground";
 import api from "../../lib/api";
 
 interface Project {
@@ -11,7 +12,7 @@ interface Project {
   tags: string[];
 }
 
-const palette = ["#3282EB", "#122E52", "#5A9EF0", "#0B1E37"];
+const palette = ["#3282EB", "#7C3AED", "#FB7185", "#F59E0B", "#122E52", "#5A9EF0"];
 
 function ProjectMockup({ color, seed }: { color: string; seed: number }) {
   const widths = ["w-2/3", "w-1/2", "w-3/4", "w-1/3"];
@@ -61,10 +62,7 @@ export function Projects() {
 
   return (
     <section id="work" className="relative overflow-hidden px-6 lg:px-10 py-28 border-t border-paper/10">
-      <div
-        className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full opacity-10 blur-3xl"
-        style={{ background: "radial-gradient(circle, #122e52, transparent 70%)" }}
-      />
+      <AuroraBackground tone="coral" />
 
       <div className="relative mx-auto max-w-[1440px]">
         <ScrollReveal className="max-w-xl mb-16">

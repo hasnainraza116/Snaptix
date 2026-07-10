@@ -5,6 +5,7 @@ import { Input } from "../ui/Input";
 import { Textarea } from "../ui/Textarea";
 import { Select } from "../ui/Select";
 import { ScrollReveal } from "../animations/ScrollReveal";
+import { AuroraBackground } from "../animations/AuroraBackground";
 import api from "../../lib/api";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -53,8 +54,9 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="px-6 py-28 border-t border-paper/10">
-      <div className="mx-auto max-w-3xl">
+    <section id="contact" className="relative overflow-hidden px-6 py-28 border-t border-paper/10">
+      <AuroraBackground tone="blue" />
+      <div className="relative mx-auto max-w-3xl">
         <ScrollReveal className="mb-12 flex items-center justify-between gap-6">
           <h2 className="text-4xl md:text-6xl font-bold normal-case">
             Let's build
@@ -64,7 +66,7 @@ export function Contact() {
           <button
             onClick={scrollToForm}
             aria-label="Scroll to contact form"
-            className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-signal text-white transition-transform hover:scale-105 md:h-20 md:w-20"
+            className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-signal via-violet to-coral text-white transition-transform hover:scale-105 md:h-20 md:w-20"
           >
             <IconArrowDown size={28} />
           </button>
@@ -78,7 +80,7 @@ export function Contact() {
           <form
             id="contact-form"
             onSubmit={handleSubmit}
-            className="scroll-mt-24 rounded-2xl border border-paper/10 bg-panel p-8 space-y-5"
+            className="scroll-mt-24 rounded-4xl border border-violet/15 bg-panel p-8 shadow-xl shadow-violet/5 space-y-5"
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <div>

@@ -13,6 +13,14 @@ export default {
         beacon: "#122E52",
         paper: "#1A1D1F",
         muted: "#5B6470",
+        // Vibrant accent trio layered on top of the blue/navy base
+        violet: "#7C3AED",
+        coral: "#FB7185",
+        amber: "#F59E0B",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "2.5rem",
       },
       fontFamily: {
         display: ["'Big Shoulders Display'", "sans-serif"],

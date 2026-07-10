@@ -12,23 +12,23 @@ import { Badge } from "../ui/Badge";
 import { ScrollReveal } from "../animations/ScrollReveal";
 
 const panels = [
-  { icon: IconMessageChatbot, label: "AI Chatbots", from: "#3282EB", to: "#5A9EF0" },
-  { icon: IconSparkles, label: "Generative AI", from: "#122E52", to: "#3282EB" },
-  { icon: IconCode, label: "Web Development", from: "#5A9EF0", to: "#122E52" },
-  { icon: IconDeviceMobile, label: "Mobile Apps", from: "#3282EB", to: "#0B1E37" },
-  { icon: IconPalette, label: "UX/UI Design", from: "#0B1E37", to: "#5A9EF0" },
-  { icon: IconBug, label: "Software Testing", from: "#122E52", to: "#5A9EF0" },
-  { icon: IconRobot, label: "Reinforcement Learning", from: "#3282EB", to: "#122E52" },
-  { icon: IconLanguage, label: "NLP Solutions", from: "#5A9EF0", to: "#3282EB" },
+  { icon: IconMessageChatbot, label: "AI Chatbots", from: "#3282EB", to: "#7C3AED" },
+  { icon: IconSparkles, label: "Generative AI", from: "#7C3AED", to: "#FB7185" },
+  { icon: IconCode, label: "Web Development", from: "#FB7185", to: "#F59E0B" },
+  { icon: IconDeviceMobile, label: "Mobile Apps", from: "#F59E0B", to: "#3282EB" },
+  { icon: IconPalette, label: "UX/UI Design", from: "#122E52", to: "#7C3AED" },
+  { icon: IconBug, label: "Software Testing", from: "#3282EB", to: "#FB7185" },
+  { icon: IconRobot, label: "Reinforcement Learning", from: "#7C3AED", to: "#122E52" },
+  { icon: IconLanguage, label: "NLP Solutions", from: "#FB7185", to: "#7C3AED" },
 ];
 
 function Panel({ icon: Icon, label, from, to }: (typeof panels)[number]) {
   return (
     <div
-      className="flex h-56 w-72 shrink-0 flex-col items-center justify-center gap-4 rounded-3xl shadow-lg"
+      className="flex h-64 w-80 shrink-0 flex-col items-center justify-center gap-4 rounded-4xl shadow-xl transition-transform duration-300 hover:scale-[1.03]"
       style={{ background: `linear-gradient(135deg, ${from}, ${to})` }}
     >
-      <Icon size={48} className="text-white/90" />
+      <Icon size={52} className="text-white/90" />
       <span className="text-sm font-medium uppercase tracking-wide text-white normal-case">
         {label}
       </span>

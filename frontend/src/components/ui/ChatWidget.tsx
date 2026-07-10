@@ -73,15 +73,15 @@ export function ChatWidget() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close chat" : "Open chat"}
-        className="fixed bottom-6 left-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-signal text-white shadow-lg transition-colors hover:bg-signal/90"
+        className="fixed bottom-6 left-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-signal via-violet to-coral text-white shadow-lg shadow-violet/30 transition-transform hover:scale-105"
       >
         {open ? <IconX size={24} /> : <IconMessageCircle size={24} />}
       </button>
 
       {open && (
-        <div className="fixed bottom-24 left-6 z-40 flex h-[28rem] w-80 flex-col overflow-hidden rounded-2xl border border-paper/10 bg-panel shadow-2xl">
-          <div className="border-b border-paper/10 px-4 py-3">
-            <span className="font-display text-sm uppercase tracking-wide text-paper">
+        <div className="fixed bottom-24 left-6 z-40 flex h-[28rem] w-80 flex-col overflow-hidden rounded-[2rem] border border-violet/15 bg-panel shadow-2xl shadow-violet/20">
+          <div className="bg-gradient-to-r from-signal via-violet to-coral px-4 py-3">
+            <span className="font-display text-sm uppercase tracking-wide text-white">
               Snaptix AI
             </span>
           </div>
@@ -90,9 +90,9 @@ export function ChatWidget() {
             {messages.map((m, i) => (
               <div
                 key={i}
-                className={`max-w-[85%] rounded-xl px-3 py-2 text-sm normal-case ${
+                className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm normal-case ${
                   m.role === "user"
-                    ? "ml-auto bg-signal text-white"
+                    ? "ml-auto bg-gradient-to-r from-signal to-violet text-white"
                     : "bg-void border border-paper/10 text-paper"
                 }`}
               >
@@ -106,13 +106,13 @@ export function ChatWidget() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask a question…"
-              className="flex-1 rounded-lg border border-paper/15 bg-void px-3 py-2 text-sm text-paper placeholder:text-muted focus:outline-none focus:border-signal"
+              className="flex-1 rounded-full border border-paper/15 bg-void px-4 py-2 text-sm text-paper placeholder:text-muted focus:outline-none focus:border-violet"
             />
             <button
               type="submit"
               disabled={streaming || !input.trim()}
               aria-label="Send"
-              className="flex h-9 w-9 items-center justify-center rounded-lg bg-signal text-white transition-opacity disabled:opacity-50"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-signal to-violet text-white transition-opacity disabled:opacity-50"
             >
               <IconSend size={16} />
             </button>

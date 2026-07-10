@@ -5,6 +5,11 @@ import { ScrollReveal } from "../animations/ScrollReveal";
 import { posts } from "../../lib/blog";
 
 const icons = { "AI Chatbots": IconMessageChatbot, "Generative AI": IconSparkles, "Product Strategy": IconDeviceMobile };
+const gradients = [
+  "from-signal to-violet",
+  "from-violet to-coral",
+  "from-coral to-amber",
+];
 
 export function Blog() {
   return (
@@ -23,7 +28,9 @@ export function Blog() {
             return (
               <ScrollReveal key={post.id} delay={i * 0.08}>
                 <Link to="/blog" className="group block">
-                  <div className="flex aspect-video items-center justify-center rounded-2xl bg-gradient-to-br from-signal to-beacon">
+                  <div
+                    className={`flex aspect-video items-center justify-center rounded-3xl bg-gradient-to-br ${gradients[i % gradients.length]} transition-transform duration-300 group-hover:scale-[1.02]`}
+                  >
                     <Icon size={40} className="text-white/90" />
                   </div>
                   <div className="mt-4 flex items-center gap-2 text-xs text-muted normal-case">
@@ -46,7 +53,7 @@ export function Blog() {
           <Link
             to="/blog"
             aria-label="See all insights"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white transition-transform hover:scale-105"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-signal via-violet to-coral text-white transition-transform hover:scale-105"
           >
             <IconArrowRight size={20} />
           </Link>

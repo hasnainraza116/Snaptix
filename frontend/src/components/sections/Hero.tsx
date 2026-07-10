@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 import { HeroMockup } from "./HeroMockup";
+import { AuroraBackground } from "../animations/AuroraBackground";
 
 interface Particle {
   x: number;
@@ -28,6 +29,7 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-40 pb-32 px-6">
       <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,black_20%,transparent_70%)]" />
+      <AuroraBackground tone="blue" />
 
       <div className="absolute inset-0 overflow-hidden">
         {particles.map((p, i) => (
@@ -60,7 +62,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mt-8 text-5xl md:text-7xl font-black leading-[0.95]"
         >
-          We build <span className="text-signal">AI products</span>
+          We build{" "}
+          <span className="bg-gradient-to-r from-signal via-violet to-coral bg-clip-text text-transparent">
+            AI products
+          </span>
           <br />
           that actually work
         </motion.h1>

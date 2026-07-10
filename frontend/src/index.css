@@ -86,6 +86,35 @@ h1, h2, h3, h4 {
   }
 }
 
+@keyframes blob-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(6%, 8%) scale(1.15); }
+  66% { transform: translate(-8%, 4%) scale(0.9); }
+}
+
+@keyframes blob-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-7%, -6%) scale(0.95); }
+  66% { transform: translate(8%, -8%) scale(1.2); }
+}
+
+@keyframes blob-drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(5%, -10%) scale(1.1); }
+}
+
+.animate-blob-a {
+  animation: blob-drift-a 18s ease-in-out infinite;
+}
+
+.animate-blob-b {
+  animation: blob-drift-b 22s ease-in-out infinite;
+}
+
+.animate-blob-c {
+  animation: blob-drift-c 16s ease-in-out infinite;
+}
+
 .marquee-track {
   animation: marquee 28s linear infinite;
 }
